@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5em;
+	overflow-x: hidden;
+}
+
+/* Page Header */
+
+#page-header {
+	background: lightblue;
+	text-align: center;
+	padding: 10em 2em;
+	position: relative;
+}
+
+.clouds img {
+	max-width: 800px;
+	position: absolute;
+	animation-name: cloudFloat;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	bottom: 0;
+}
+
+@keyframes cloudFloat{
+	0% {left: -800px;}
+	100% {left: 100%;}
+}
+
+.clouds img:nth-child(1){
+	left: 0;
+	animation-duration: 48s;
+	animation-direction: reverse;
+	bottom: 30%;
+}
+
+.clouds img:nth-child(2){
+	left: 0;
+	animation-duration: 40s;
+	animation-direction: reverse;
+}
+
+.clouds img:nth-child(3){
+	right: 20%;
+	bottom: -100px;
+	animation-duration: 20s;
+	z-index:2;
+}
+
+.clouds img:nth-child(4){
+	right: 0;
+	animation-duration: 60s;
+}
+
+#page-header h1{
+	position: relative;
+	z-index: 1;
+}
+
+
+/* Menu */
+
+#menu {
+	background: rgba(0,0,255,0.75);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 3;
+}
+
+#menu ul {
+	display: flex;
+	justify-content: center;
+
+}
+
+#menu li {
+	list-style: none;
+}
+
+#menu a {
+	display: block;
+	color: white;
+	padding: 1em 1.5em;
+	text-decoration: none;
+	font-weight: bold;
+	transition: all 1s ease;
+}
+
+#menu a:hover {
+	background-color: white;
+	color: black;
+}
+
+/* Article */
+
+article {
+	padding: 2em;
+}
+
+article h2 {
+	font-size: 3em;
+	margin-bottom: 0.5em;
+}
+
+article h3 {
+	font-size: 2em;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	color: #999;
+}
+
+article p {
+	margin-bottom: 1em;
+}
+
+.button a {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0.5em 1em;
+	border: 2px solid black;
+	border-radius: 5px;
+	transition: all 1s ease;
+}
+
+.button a:hover{
+	color: white;
+	background-color: black;
+}
+
+
+.button a:active {
+	transform: scale(0.9);
+}
